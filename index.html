@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet/less" href="css/style.less" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/less.min.js"></script>
+
+    <script>
+        $( document ).ready(function(){
+
+            $('.btn').click(function(){
+                $('.popup').fadeToggle('fast');
+            });
+            $('.wrap').click(function(e){
+                if(e.target.nodeName == 'A'){
+                    $('.popup').fadeToggle('fast');
+                }
+
+            });
+
+        });
+
+
+    </script>
+
+    <title>BUTTON</title>
+
+</head>
+<body>
+<a href="#" class="btn">
+    press
+</a>
+
+<div class="popup">
+    <div class="addFunds">
+        <div class="wrap">
+            <div class="header">
+                <span class="fl">Adding funds</span><span class="fr"><a href="#">✖</a></span>
+            </div>
+            <div class="content">
+                <p class="info">
+                    Dear user, we do not charge any additional fees for loading funds to your balance. You pay only the fee
+                    of the payment service that you'll choose.
+                </p>
+                <div class="amount-block">
+                    <div class="fl">
+                        <p><span>Payment amount</span></p>
+                        <p>Fee will be added to amount.</p>
+                        <input type="text" pattern="[0-9]{1,10}" placeholder="Amount in USD">
+                    </div>
+                    <div class="fr">
+                        <p><span>$15,230.00</span></p>
+                        <p>Balance</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="method-block">
+                    <div class="fl">
+                        <p><span>Payment method</span></p>
+                        <p>Choose payment method you like:</p>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="methods">
+
+                        <div class="method">
+                            <input type="radio" name="method" value="paxum" id="paxum"> <label for="paxum"></label>
+                            <div><img src="./img/logo/paxum.png" alt="paxum"></div>
+                            <p>no fee</p>
+                        </div>
+                        <div class="method">
+                            <input type="radio" name="method" value="paypal" id="paypal"> <label for="paypal"></label>
+                            <div><img src="./img/logo/paypal.png" alt="Paypal"></div>
+                            <p>3.5% fee</p>
+                        </div>
+                        <div class="method">
+                            <input type="radio" name="method" value="webmoney" id="webmoney"> <label for="webmoney"></label>
+                            <div><img src="./img/logo/webmoney.png" alt="WebMoney"></div>
+                            <p>no fee</p>
+                        </div>
+                        <div class="method">
+                            <input type="radio" name="method" value="epayservice" id="epayservice"> <label for="epayservice"></label>
+                            <div><img src="./img/logo/epayservice.png" alt="ePayService"></div>
+                            <p>no fee</p>
+                        </div>
+                        <div class="method">
+                            <input type="radio" name="method" value="2checkout" id="2checkout"> <label for="2checkout"></label>
+                            <div><img src="./img/logo/2checkout.png" alt="2checkout"></div>
+                            <p>no fee</p>
+                        </div>
+                        <div class="method">
+                            <input type="radio" name="method" value="ecoin" id="ecoin"> <label for="ecoin"></label>
+                            <div><img src="./img/logo/ecoin.png" alt="ecoin"></div>
+                            <p>no fee</p>
+                        </div>
+                        <div class="method">
+                            <input type="radio" name="method" value="p2axum" id="p2axum"> <label for="p2axum"></label>
+                            <div><p><span>Wire transfer</span></p></div>
+                            <p>no fee, takes 3-5 days</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+
+                <div class="links">
+                    <a href="#">cancel</a><a href="#">continue</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
